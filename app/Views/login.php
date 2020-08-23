@@ -1,20 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>" type="text/css">
+    <script src="<?= base_url('bootstrap/js/bootstrap.min.js') ?>"></script>
+
+    <!-- jquery -->
+    <script src="<?= base_url('jquey/jquery-3.5.1.min.js') ?>"></script>
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+
+
+        .main-head {
+            height: 150px;
+            background: #EEE;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            background-color:cadetblue;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+
+        .main {
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .login-form {
+                margin-top: 10%;
+            }
+
+            .register-form {
+                margin-top: 10%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .main {
+                margin-left: 40%;
+            }
+
+            .sidenav {
+                width: 40%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+            .login-form {
+                margin-top: 80%;
+            }
+
+            .register-form {
+                margin-top: 20%;
+            }
+        }
+
+
+        .login-main-text {
+            margin-top: 20%;
+            padding: 60px;
+            color:gainsboro;
+        }
+
+        .login-main-text h2 {
+            font-weight: 300;
+        }
+
+        .btn-black {
+            background-color: #000 !important;
+            color: #fff;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="row">
-    <div class="col-8">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam similique, vel minus voluptas, sapiente quod illo in nam deserunt, tenetur ipsa nulla neque amet sit quibusdam. Dolore omnis quia id labore magni repellat delectus dignissimos beatae nulla molestiae pariatur, nesciunt obcaecati totam accusantium corporis mollitia quibusdam eius ad assumenda neque odio expedita ratione. Qui ullam ex minima suscipit, doloremque temporibus officiis? Nobis cum iure, odio esse iusto vero officia consectetur explicabo accusamus veritatis temporibus deleniti saepe laudantium. Quibusdam asperiores sint officia, necessitatibus laboriosam adipisci. Molestiae magnam sapiente id alias accusantium nobis consectetur sit, sint veniam iste quo officia est dolor ea distinctio repellendus aspernatur laborum voluptates at quaerat illo cumque excepturi voluptas nulla. Iure, ipsa perspiciatis consequuntur ullam hic obcaecati voluptatem sunt ipsam blanditiis sit ex earum corporis dolor dicta possimus perferendis velit cumque praesentium fuga repellat tempore quaerat! Necessitatibus numquam possimus assumenda, vel ea aut, recusandae esse cum veniam aperiam eum! Voluptatibus, incidunt? Commodi tempora quia voluptatibus optio laborum delectus nemo reprehenderit, obcaecati doloribus aut aspernatur necessitatibus consectetur est expedita maiores iusto? Quis minus sint magnam ipsam ex quasi quo aut voluptatibus eveniet accusamus molestias natus error nam ducimus voluptas illo quibusdam quidem adipisci dolores, ipsum impedit atque. Odio temporibus voluptates tempora provident error, iure veritatis tempore explicabo labore reiciendis porro culpa quod ex maiores! Similique, esse quisquam aut minus laudantium blanditiis? Beatae harum voluptate debitis officiis optio assumenda aliquam iure explicabo hic, voluptatibus similique nemo dolor iusto deleniti exercitationem mollitia voluptatum animi? Aut alias, temporibus ducimus, dolore beatae incidunt saepe ab eveniet accusamus, id laboriosam repellat vel libero reiciendis? Vero vel eius pariatur iure id. Ut eum qui laboriosam reiciendis possimus labore suscipit deserunt, numquam praesentium neque, veritatis repudiandae rem provident optio atque. Alias, labore, voluptates, laborum similique repellat quidem repellendus id sed nesciunt necessitatibus iste aliquid.
-    </div>
-    <div class="col-4">
-        <div class="card">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum vero maiores vel quod repellat similique veritatis delectus. Necessitatibus voluptatem laboriosam aperiam doloremque corrupti quod ratione provident, ullam magnam. Dolores, praesentium accusantium quae incidunt cupiditate libero unde facilis similique provident!
-        </div>
-    </div>
-    </div>
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>PoliBatam Press</h2>
+            <p>Login or register from here to access.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form action="home/login" method="POST">
+                  <div class="form-group">
+                     <label>User Name</label>
+                     <input type="text" name="username" class="form-control" placeholder="User Name">
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" name="password" class="form-control" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-black">Login</button>
+                  <a href="home/register" class="btn btn-secondary">Register</a>
+               </form>
+            </div>
+         </div>
+      </div>
 </body>
+
 </html>

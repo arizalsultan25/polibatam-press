@@ -13,5 +13,15 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
+	public function login(){
+		if(isset($_POST['username']) && isset($_POST['password'])){
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+
+			return view('test', ['username' => $username, 'password' => $password]);
+		}else{
+			$this->index();
+		}
+	}
 
 }
